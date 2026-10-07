@@ -7,9 +7,9 @@ An independent football analytics project exploring World Cup growth, historical
 
 ## The story behind the project
 
-My interest in World Cup history began with the football charts I studied growing up in Lagos. This project takes that curiosity into a structured analytical workflow: collating tournament records, preparing data, writing SQL, and communicating patterns through Power BI.
+My interest in World Cup history began with the football charts I studied growing up in Lagos. This project takes that curiosity into a structured analytical workflow: collating tournament records, preparing data, writing SQL and communicating patterns through Power BI.
 
-The aim is not just to display football statistics. It is to make the underlying questions, calculations, and data decisions visible.
+The aim is not just to display football statistics. It is to make the underlying questions, calculations and data decisions visible.
 
 ## What the analysis investigates
 
@@ -30,7 +30,7 @@ Host distribution and individual awards provide additional context.
 | Tool | Role in the project |
 | --- | --- |
 | Excel and Power Query | Collating, cleaning, transforming, and preparing datasets. |
-| PostgreSQL | Validating records, investigating analytical questions, and preparing reporting views. |
+| PostgreSQL | Validating records, investigating analytical questions and preparing reporting views. |
 | Power BI | Building interactive visuals, measures, and dashboard pages. |
 
 The working SQL includes common table expressions, joins, conditional classifications, aggregations, window functions such as `LAG`, and reporting-view development.
@@ -45,11 +45,11 @@ Country-name conventions, changing tournament formats, match-result definitions,
 
 ## Repository status
 
-**Repository setup is in progress.** This README introduces the project. SQL scripts, methodology documentation, datasets, dashboard screenshots, and a public Power BI link still need to be added to this repository.
+**Repository setup is in progress.** This README introduces the project. SQL scripts, methodology documentation, datasets, dashboard screenshots and a public Power BI link still need to be added to this repository.
 
 The working SQL initially described a historical scope of **1930–2022**. Later working sections also referred to 2026 records. The final published date range will be confirmed against the source data; unverified 2026 entries are not presented here as established historical findings.
 
-This repository is not yet a fully reproducible release. Prepared SQL modules require testing against the final PostgreSQL database, and numerical findings will be published with their validated outputs.
+This repository is not yet a fully reproducible release. Prepared SQL modules require testing against the final PostgreSQL database and numerical findings will be published with their validated outputs.
 
 ## Planned repository structure
 
@@ -71,5 +71,5 @@ Data-source references and reuse terms will be documented before datasets are pu
 ## Author
 
 **Bolaji Ibrahim Ajibola**  
-Football data analysis and business intelligence  
+Football data analysis and Business intelligence  
 GitHub: **bj985**
