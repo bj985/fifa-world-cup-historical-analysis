@@ -1,9 +1,9 @@
-# FIFA World Cup Historical Analysis
+# FIFA World Cup Historical Analysis (1930–2026)
 ### From Street Charts to Data Analytics
 
 **Bolaji Ibrahim Ajibola** | **SQL (PostgreSQL) · Power BI · Excel · Power Query**
 
-An independent football analytics project exploring World Cup growth, historical dominance, goal-scoring patterns, attendance, and national-team performance, with a dedicated focus on African nations.
+An independent football analytics project covering **1930–2026**, exploring World Cup growth, historical dominance, goal-scoring patterns, attendance, and national-team performance, with a dedicated focus on African nations.
 
 ## The story behind the project
 
@@ -43,11 +43,15 @@ National-team analysis considers participation alongside results, rather than tr
 
 Country-name conventions, changing tournament formats, match-result definitions, and missing attendance records require explicit treatment. Methodology notes will accompany the published query files so these decisions can be reviewed.
 
+## Project coverage
+
+**1930–2026.** The project was initially developed using 1930–2022 data and was subsequently expanded to include 2026. References to 2022 in the original working-SQL header describe an earlier development stage, not the current project scope.
+
+The repository's SQL publication will reflect this expanded coverage. Earlier query extracts that retain a 2022 cutoff need to be revised and tested before being published as the full-scope analysis.
+
 ## Repository status
 
 **Repository setup is in progress.** This README introduces the project. SQL scripts, methodology documentation, datasets, dashboard screenshots and a public Power BI link still need to be added to this repository.
-
-The working SQL initially described a historical scope of **1930–2022**. Later working sections also referred to 2026 records. The final published date range will be confirmed against the source data; unverified 2026 entries are not presented here as established historical findings.
 
 This repository is not yet a fully reproducible release. Prepared SQL modules require testing against the final PostgreSQL database and numerical findings will be published with their validated outputs.
 
