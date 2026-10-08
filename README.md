@@ -1,5 +1,5 @@
 # FIFA World Cup Historical Analysis (1930–2026)
-### From Street Charts to Data Analytics
+*From Street Charts to Data Analytics*
 
 **Bolaji Ibrahim Ajibola** | **SQL (PostgreSQL) · Power BI · Excel · Power Query**
 
@@ -7,7 +7,7 @@ An independent football analytics project covering **1930–2026**, exploring Wo
 
 ## The story behind the project
 
-My interest in World Cup history began with the football charts I studied growing up in Lagos. This project takes that curiosity into a structured analytical workflow: collating tournament records, preparing data, writing SQL and communicating patterns through Power BI.
+My interest in World Cup history began with the football charts I studied growing up in Lagos. This project takes that curiosity into a structured analytical workflow: collating tournament records, preparing data, writing SQL, and communicating patterns through Power BI.
 
 The aim is not just to display football statistics. It is to make the underlying questions, calculations and data decisions visible.
 
@@ -30,7 +30,7 @@ Host distribution and individual awards provide additional context.
 | Tool | Role in the project |
 | --- | --- |
 | Excel and Power Query | Collating, cleaning, transforming, and preparing datasets. |
-| PostgreSQL | Validating records, investigating analytical questions and preparing reporting views. |
+| PostgreSQL | Validating records, investigating analytical questions, and preparing reporting views. |
 | Power BI | Building interactive visuals, measures, and dashboard pages. |
 
 The working SQL includes common table expressions, joins, conditional classifications, aggregations, window functions such as `LAG`, and reporting-view development.
@@ -53,7 +53,7 @@ The repository's SQL publication will reflect this expanded coverage. Earlier qu
 
 **Repository setup is in progress.** This README introduces the project. SQL scripts, methodology documentation, datasets, dashboard screenshots and a public Power BI link still need to be added to this repository.
 
-This repository is not yet a fully reproducible release. Prepared SQL modules require testing against the final PostgreSQL database and numerical findings will be published with their validated outputs.
+This repository is not yet a fully reproducible release. Prepared SQL modules require testing against the final PostgreSQL database, and numerical findings will be published with their validated outputs.
 
 ## Planned repository structure
 
@@ -62,10 +62,10 @@ The following folders will be added as their contents are reviewed:
 ```text
 README.md
 sql/        SQL analysis and validation queries
- data/      Datasets and source documentation
- docs/      Data model, methodology, and interpretation notes
- powerbi/   Dashboard documentation and model assets
- assets/    Genuine dashboard screenshots
+data/       Datasets and source documentation
+docs/       Data model, methodology, and interpretation notes
+powerbi/    Dashboard documentation and model assets
+assets/     Genuine dashboard screenshots
 ```
 
 ## Data and source notes
@@ -75,5 +75,5 @@ Data-source references and reuse terms will be documented before datasets are pu
 ## Author
 
 **Bolaji Ibrahim Ajibola**  
-Football data analysis and Business intelligence  
-GitHub: **bj985**
+Football Data Analysis and Business Intelligence  
+GitHub: [bj985](https://github.com/bj985)
