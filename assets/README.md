@@ -1,21 +1,25 @@
 # Assets
 
-This folder contains visual assets used by the project README.
+Visual assets used by the FIFA World Cup Historical Analysis README.
 
-## Current files
+## Dashboard pages
 
-- world-cup-hero.svg — repository banner used at the top of the README.
+| File | Dashboard page |
+| --- | --- |
+| `dashboard-overview.jpg` | 01 · Overview |
+| `historical-dominance.jpg` | 02 · Historical Dominance |
+| `host-expansion.jpg` | 03 · Host & Expansion |
+| `goals-analysis.jpg` | 04 · Goals Analysis |
+| `attendance-venue.jpg` | 05 · Attendance & Venue |
+| `team-analysis.jpg` | 06 · World Cup Team Analysis |
+| `african-nations-analysis.jpg` | 07 · African Nations Analysis |
+| `world-cup-awards.jpg` | 08 · World Cup Awards |
+| `regional-analysis.jpg` | 09 · Regional Analysis |
 
-## Dashboard screenshots to add
+## Other asset
 
-When final screenshots are ready, add them here using names such as:
+- `world-cup-hero.svg` — repository banner.
 
-- dashboard-overview.png
-- tournament-evolution.png
-- attendance-analysis.png
-- africa-performance.png
-- 2026-analysis.png
+The dashboard screenshots are reduced copies for GitHub presentation. Keep the original full-resolution exports outside the repository or publish them separately if readers need to inspect small labels.
 
-Prefer exported PNG files with readable labels at GitHub width. Avoid screenshots that include Power BI editor chrome unless the editing interface is part of the story.
-
-Third-party logos and imagery retain their own reuse conditions.
+Third-party logos, competition marks and imagery retain their respective rights and reuse conditions.
