@@ -1,77 +1,202 @@
+<p align="center">
+  <img src="assets/world-cup-hero.svg" alt="FIFA World Cup Historical Analysis — Bolaji Ibrahim Ajibola" width="100%">
+</p>
+
 # FIFA World Cup Historical Analysis (1930–2026)
-*From Street Charts to Data Analytics*
 
-**Bolaji Ibrahim Ajibola** | **SQL (PostgreSQL) · Power BI · Excel · Power Query**
+**From Street Charts to Data Analytics**
 
-An independent football analytics project exploring World Cup growth, historical dominance, goal-scoring patterns, attendance and national-team performance, with a dedicated focus on African nations.
+**Bolaji Ibrahim Ajibola** · Football Data Analyst  
+**PostgreSQL · Power BI · Excel · Power Query**
 
-[Explore the SQL](sql/01_analysis.sql) · [Validation checks](sql/00_validation.sql) · [Methodology](docs/methodology.md) · [All projects](https://github.com/bj985/jibol)
+An independent football analytics project exploring how the FIFA World Cup has evolved across tournament scale, scoring, attendance, national-team performance and African participation.
 
-## The story behind the project
+> The goal is not simply to display football statistics. It is to make the analytical questions, preparation decisions, SQL logic and visual story visible.
 
-My interest in World Cup history began with the football charts I studied growing up in Lagos. This project takes that curiosity into a structured analytical workflow: collating tournament records, preparing data, writing SQL, and communicating patterns through Power BI.
+[SQL analysis](sql/01_analysis.sql) · [Validation checks](sql/00_validation.sql) · [Methodology](docs/methodology.md) · [Data model](docs/data-model.md) · [Portfolio](https://ibrahimbolaji.framer.website/)
 
-The aim is not just to display football statistics. It is to make the underlying questions, calculations and data decisions visible.
+---
 
-## What the analysis investigates
+## Project objective
 
-| Analytical question | Approach |
+Build a structured historical analysis of the World Cup that connects **data preparation → SQL analysis → Power BI storytelling**.
+
+| Question | Analytical approach |
 | --- | --- |
-| How has the tournament changed? | Compare participating teams, matches, goals, scoring rates and changes between editions. |
-| Which nations sustain success? | Examine titles, top-two finishes and longer-term team records. |
-| How have scoring patterns evolved? | Compare goals per match and weighted scoring rates across periods. |
-| What does attendance reveal? | Compare total crowds, attendance per match and changes between editions. |
-| How have African nations performed? | Examine participation, match records, scoring and best recorded positions. |
+| How has the World Cup changed over time? | Compare teams, matches, goals and scoring rates across editions and eras. |
+| Which nations sustain success? | Compare titles, top-two finishes, wins, goal difference and standardised points. |
+| How have scoring patterns evolved? | Recalculate goals per match and compare weighted era scoring rates. |
+| What does attendance reveal? | Compare total attendance, attendance per match and changes between editions. |
+| How have African nations performed? | Compare participation, match records, scoring and best recorded positions. |
+| Which matches and players stand out? | Review high-scoring matches and award timelines. |
 
-Match-level scoring and individual awards provide additional context.
+---
+
+## Project scope
+
+**1930–2026.** The project began with historical data through 2022 and was later expanded with a 2026 project layer.
+
+Historical records and any 2026 scenario, simulated or manually supplied records should remain clearly distinguishable in interpretation and presentation.
+
+---
+
+## Data model
+
+| Table | Intended role |
+| --- | --- |
+| worldcup_summary | One row per tournament edition |
+| worldcup_matches | Match-level results |
+| worldcup_nations_history | Team-by-edition performance |
+| worldcup_attendance | Edition-level attendance |
+| worldcup_awards | Tournament awards |
+| worldcup_goals | Coverage checks for scoring data |
+| country_lookup | Historical-name and regional mapping |
+
+See the full [data model](docs/data-model.md) for expected grain, fields, keys and join considerations.
+
+---
 
 ## Tools and workflow
 
-**Data collation → Excel / Power Query preparation → PostgreSQL analysis and reporting views → Power BI → written insights**
+**Research & collation → Excel / Power Query → country-name standardisation & checks → PostgreSQL validation → SQL analysis → Power BI → written interpretation**
 
 | Tool | Role |
 | --- | --- |
-| Excel and Power Query | Collating, cleaning, transforming and preparing datasets |
-| PostgreSQL | Validating records, investigating questions and preparing reporting views |
-| Power BI | Interactive visuals, measures and dashboard pages |
+| Excel | Source collation and structured working files |
+| Power Query | Cleaning, transformation and field preparation |
+| PostgreSQL | Validation, aggregation, joins and analytical queries |
+| Power BI | Measures, interactive visuals and dashboard storytelling |
 
-The published SQL demonstrates common table expressions, joins, aggregations, conditional logic, window functions, zero-denominator handling and data-quality checks.
+---
 
-## Project coverage
+## SQL analysis
 
-**1930–2026.** The project was initially developed using 1930–2022 data and was subsequently expanded to include 2026. References to 2022 in older working files describe an earlier development stage, not the current project scope.
+### Validation checks
 
-The selected analysis queries published here explicitly include years through 2026. The validation file also reports 2026 row counts for each source table. The final era grouping in the selected analysis extends through 2026.
+[sql/00_validation.sql](sql/00_validation.sql) checks:
 
-## Published files
+- source-table coverage and explicit 2026 row counts;
+- duplicate tournament years;
+- missing or duplicate match IDs;
+- duplicate team-edition keys;
+- match and goal reconciliation;
+- team accounting consistency;
+- missing country mappings;
+- conflicting regional classifications;
+- missing or negative scores.
 
-| File | Contents |
-| --- | --- |
-| [Validation SQL](sql/00_validation.sql) | Eleven inspection queries covering column types, coverage, keys, match/goal reconciliation, accounting and mappings |
-| [Analysis SQL](sql/01_analysis.sql) | Nine selected queries covering overview, evolution, eras, top-two finishes, teams, matches, attendance, awards and African teams |
-| [Data model](docs/data-model.md) | Observed source tables, expected grains and required fields |
-| [Methodology](docs/methodology.md) | Metric definitions, scope, packaging changes and limitations |
+### Selected analysis
 
-The SQL is adapted from selected parts of the working project. It is not a complete export of the original development script or every dashboard view.
+[sql/01_analysis.sql](sql/01_analysis.sql) contains nine selected analyses:
 
-## Run the SQL
+1. Tournament coverage
+2. Tournament development
+3. Era comparison
+4. Titles and top-two finishes
+5. Team performance
+6. Highest-scoring matches
+7. Attendance
+8. Awards
+9. African team records
 
-Use a separate review database containing the project's source tables in the `public` schema. Begin with the column inventory in the validation file, compare it with the data-model document, then review validation outputs before running the analysis.
+The SQL demonstrates joins, aggregations, conditional logic, common table expressions, window functions, numeric division and zero-denominator handling.
 
-Both scripts use read-only transactions and end with `ROLLBACK`; they do not create or populate the database. They received non-mutating-statement and date-scope checks, but have **not been executed against the final PostgreSQL database** during this publication update.
+---
 
-## Interpretation and release status
+## Dashboard story
 
-Compare scale with rates, and participation with performance. The selected queries preserve source team labels rather than silently merging historical teams. Standardised points are labelled separately from historical official points; best recorded positions are not automatically translated into rounds reached.
+### Tournament evolution
+How participation, match volume and scoring changed as the competition expanded.
 
-The final datasets, schema export, Power BI model, verified dashboard URL, screenshots and validated result tables remain to be published. This repository now contains inspectable SQL and documentation, but is not yet reproducible from an empty database.
+### Historical dominance
+Which national teams repeatedly reached the top of the tournament, and how title counts compare with broader performance.
 
-## Sources and reuse
+### Goals and match patterns
+How scoring rates changed across editions, plus the highest-scoring recorded matches.
 
-Record original source URLs, extraction dates and reuse terms before adding datasets. Numerical findings should be accompanied by their checked outputs and filter context. No licence has been selected automatically for the code or third-party data.
+### Attendance
+How total crowds and per-match attendance changed across World Cup editions.
+
+### African nations
+How African teams compare on participation, results, scoring and best recorded positions.
+
+### 2026 project extension
+A dedicated layer for the expanded 2026 project data. This should be labelled according to the evidence status of the records used.
+
+---
+
+## Dashboard preview
+
+Final dashboard screenshots are being prepared.
+
+When ready, they will live in [assets/](assets/) and be added here as clean, readable previews.
+
+> **Publishing note:** screenshots should distinguish historical observed results from any 2026 scenario or simulated records.
+
+See the [dashboard publishing guide](docs/dashboard-guide.md).
+
+---
+
+## Methodology notes
+
+- Historical team labels are preserved rather than silently merging successor states.
+- Top-two finishes are not automatically treated as identical to appearances in a modern single-final format.
+- Era scoring is calculated from total goals divided by total matches.
+- Standardised points use 3 × wins + draws for comparison and are not historical official points.
+- Attendance-per-match calculations depend on matching attendance totals to corresponding match counts.
+- African comparisons use the project lookup table and should be preceded by mapping-quality checks.
+
+Read the full [methodology](docs/methodology.md).
+
+---
+
+## Repository structure
+
+    fifa-world-cup-historical-analysis/
+    ├── README.md
+    ├── assets/
+    │   ├── README.md
+    │   └── world-cup-hero.svg
+    ├── docs/
+    │   ├── dashboard-guide.md
+    │   ├── data-model.md
+    │   └── methodology.md
+    └── sql/
+        ├── 00_validation.sql
+        └── 01_analysis.sql
+
+---
+
+## Reproducibility status
+
+This repository currently publishes the analytical SQL and project documentation.
+
+The final schema export, permitted datasets, verified query outputs, Power BI model, dashboard screenshots and public dashboard link still need to be added before the project can be reproduced from an empty database.
+
+Both SQL scripts use read-only transactions and end with ROLLBACK.
+
+---
+
+## Next publication steps
+
+- [ ] Add clean Power BI dashboard screenshots
+- [ ] Add the verified public Power BI link
+- [ ] Publish permitted source datasets or documented import instructions
+- [ ] Add verified query-output examples
+- [ ] Clearly label the status of 2026 records
+- [ ] Add the final written report when complete
+
+---
 
 ## Author
 
 **Bolaji Ibrahim Ajibola**  
-Football Data Analysis and Business Intelligence  
+Football Data Analyst · Data Storytelling & Match Video Analysis
+
 [Portfolio](https://ibrahimbolaji.framer.website/) · [LinkedIn](https://www.linkedin.com/in/ajibola-bolaji/) · [GitHub](https://github.com/bj985)
+
+---
+
+### Disclaimer
+
+This is an independent analytical project and is not affiliated with FIFA. Third-party data, trademarks and imagery retain their respective rights and reuse conditions.
