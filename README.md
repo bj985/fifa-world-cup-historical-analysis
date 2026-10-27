@@ -127,11 +127,68 @@ A dedicated layer for the expanded 2026 project data. This should be labelled ac
 
 ## Dashboard preview
 
-Final dashboard screenshots are being prepared.
+### 01 · Overview
 
-When ready, they will live in [assets/](assets/) and be added here as clean, readable previews.
+<p align="center">
+  <img src="assets/dashboard-overview.jpg" alt="World Cup Historical Analytics overview dashboard" width="100%">
+</p>
 
-> **Publishing note:** screenshots should distinguish historical observed results from any 2026 scenario or simulated records.
+The overview brings tournament scale, match volume, goals, scoring rate, champion count and attendance into one entry point, supported by tournament-growth and historical trend visuals.
+
+### Analytical pages
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<strong>02 · Historical Dominance</strong><br><br>
+<img src="assets/historical-dominance.jpg" alt="Historical dominance dashboard" width="100%"><br>
+Titles, podium finishes, final appearances and final-conversion patterns.
+</td>
+<td width="50%" valign="top">
+<strong>03 · Host & Expansion</strong><br><br>
+<img src="assets/host-expansion.jpg" alt="Host and expansion dashboard" width="100%"><br>
+Host nations, co-hosting, regional distribution and the geographic expansion of the tournament.
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<strong>04 · Goals Analysis</strong><br><br>
+<img src="assets/goals-analysis.jpg" alt="World Cup goals analysis dashboard" width="100%"><br>
+Scoring intensity, highest-scoring tournaments, match records and goals by competition stage.
+</td>
+<td width="50%" valign="top">
+<strong>05 · Attendance & Venue</strong><br><br>
+<img src="assets/attendance-venue.jpg" alt="World Cup attendance and venue dashboard" width="100%"><br>
+Attendance growth, high-attendance matches, stage-level crowds and stadium usage.
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<strong>06 · Team Analysis</strong><br><br>
+<img src="assets/team-analysis.jpg" alt="World Cup team analysis dashboard" width="100%"><br>
+Match outcomes, experience versus win rate, goals for and against, and comparative points.
+</td>
+<td width="50%" valign="top">
+<strong>07 · African Nations</strong><br><br>
+<img src="assets/african-nations-analysis.jpg" alt="African nations World Cup analysis dashboard" width="100%"><br>
+Participation, campaign quality, match outcomes, scoring and the growth of African representation.
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<strong>08 · World Cup Awards</strong><br><br>
+<img src="assets/world-cup-awards.jpg" alt="World Cup awards dashboard" width="100%"><br>
+Golden Boot, Golden Ball, Golden Glove, young-player and fair-play award history.
+</td>
+<td width="50%" valign="top">
+<strong>09 · Regional Analysis</strong><br><br>
+<img src="assets/regional-analysis.jpg" alt="World Cup regional analysis dashboard" width="100%"><br>
+Regional match outcomes, podiums, goal output, win rates and final-conversion comparisons.
+</td>
+</tr>
+</table>
+
+> **2026 scope note:** the project includes a dedicated 2026 layer. Its evidence status should remain clearly labelled wherever 2026 records are scenario-based, simulated or manually supplied.
 
 See the [dashboard publishing guide](docs/dashboard-guide.md).
 
