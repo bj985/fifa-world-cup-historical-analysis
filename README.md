@@ -213,7 +213,8 @@ Read the full [methodology](docs/methodology.md).
     ├── README.md
     ├── assets/
     │   ├── README.md
-    │   └── world-cup-hero.svg
+    │   ├── world-cup-hero.svg
+    │   └── dashboard screenshots (01–09)
     ├── docs/
     │   ├── dashboard-guide.md
     │   ├── data-model.md
@@ -228,7 +229,7 @@ Read the full [methodology](docs/methodology.md).
 
 This repository currently publishes the analytical SQL and project documentation.
 
-The final schema export, permitted datasets, verified query outputs, Power BI model, dashboard screenshots and public dashboard link still need to be added before the project can be reproduced from an empty database.
+The dashboard screenshots are now included. The final schema export, permitted datasets, verified query outputs, Power BI model and public dashboard link still need to be added before the project can be reproduced from an empty database.
 
 Both SQL scripts use read-only transactions and end with ROLLBACK.
 
@@ -236,7 +237,7 @@ Both SQL scripts use read-only transactions and end with ROLLBACK.
 
 ## Next publication steps
 
-- [ ] Add clean Power BI dashboard screenshots
+- [x] Add clean Power BI dashboard screenshots
 - [ ] Add the verified public Power BI link
 - [ ] Publish permitted source datasets or documented import instructions
 - [ ] Add verified query-output examples
