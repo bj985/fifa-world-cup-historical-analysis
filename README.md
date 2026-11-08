@@ -13,7 +13,7 @@ An independent football analytics project exploring how the FIFA World Cup has e
 
 > The goal is not simply to display football statistics. It is to make the analytical questions, preparation decisions, SQL logic and visual story visible.
 
-[SQL analysis](sql/01_analysis.sql) · [Validation checks](sql/00_validation.sql) · [Methodology](docs/methodology.md) · [Data model](docs/data-model.md) · [Portfolio](https://ibrahimbolaji.framer.website/)
+[Dataset](data/Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx) · [SQL analysis](sql/01_analysis.sql) · [Validation checks](sql/00_validation.sql) · [Methodology](docs/methodology.md) · [Data model](docs/data-model.md) · [Portfolio](https://ibrahimbolaji.framer.website/)
 
 ---
 
@@ -53,6 +53,16 @@ Historical records and any 2026 scenario, simulated or manually supplied records
 | country_lookup | Historical-name and regional mapping |
 
 See the full [data model](docs/data-model.md) for expected grain, fields, keys and join considerations.
+
+---
+
+## Dataset
+
+The cleaned SQL-ready workbook used for this project is included here:
+
+**[Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx](data/Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx)**
+
+It contains the prepared project tables used for PostgreSQL validation, SQL analysis and Power BI development. The workbook includes the historical dataset through 2022 together with the separate 2026 project extension described above.
 
 ---
 
@@ -215,6 +225,8 @@ Read the full [methodology](docs/methodology.md).
     │   ├── README.md
     │   ├── world-cup-hero.svg
     │   └── dashboard screenshots (01–09)
+    ├── data/
+    │   └── Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx
     ├── docs/
     │   ├── dashboard-guide.md
     │   ├── data-model.md
@@ -227,9 +239,9 @@ Read the full [methodology](docs/methodology.md).
 
 ## Reproducibility status
 
-This repository currently publishes the analytical SQL and project documentation.
+This repository currently publishes the SQL-ready project workbook, analytical SQL, dashboard screenshots and supporting documentation.
 
-The dashboard screenshots are now included. The final schema export, permitted datasets, verified query outputs, Power BI model and public dashboard link still need to be added before the project can be reproduced from an empty database.
+The final schema export, verified query outputs, Power BI model and public dashboard link still need to be added before the project can be reproduced from an empty database.
 
 Both SQL scripts use read-only transactions and end with ROLLBACK.
 
@@ -239,7 +251,7 @@ Both SQL scripts use read-only transactions and end with ROLLBACK.
 
 - [x] Add clean Power BI dashboard screenshots
 - [ ] Add the verified public Power BI link
-- [ ] Publish permitted source datasets or documented import instructions
+- [x] Add the cleaned SQL-ready project workbook
 - [ ] Add verified query-output examples
 - [ ] Clearly label the status of 2026 records
 - [ ] Add the final written report when complete
