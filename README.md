@@ -34,11 +34,7 @@ Build a structured historical analysis of the FIFA World Cup that connects **dat
 
 ## Project scope
 
-The project covers **1930–2026**.
-
-The historical dataset runs through **2022**. A separate **2026 project extension** was added later to support analysis of the expanded tournament format.
-
-> **Important:** historical records and any 2026 scenario, simulated or manually supplied records should remain clearly distinguishable in interpretation and presentation.
+The project covers the completed FIFA World Cup tournaments from **1930 through 2026**, including the expanded 48-team edition hosted by Canada, Mexico and the United States.
 
 ---
 
@@ -66,7 +62,7 @@ The cleaned SQL-ready workbook used for this project is included in the reposito
 
 It contains the prepared project tables used for PostgreSQL validation, SQL analysis and Power BI development.
 
-The workbook combines the historical dataset through 2022 with the separate 2026 project extension described above.
+The workbook contains the completed historical tournament data from 1930 through 2026 used across the SQL analysis and Power BI dashboard.
 
 ---
 
