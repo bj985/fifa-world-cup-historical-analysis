@@ -11,7 +11,7 @@
 
 An independent football analytics project exploring how the FIFA World Cup has evolved across tournament scale, scoring, attendance, national-team performance and African participation.
 
-> The goal is not simply to display football statistics. It is to make the analytical questions, preparation decisions, SQL logic and visual story visible.
+> The aim is not simply to display football statistics, but to make the analytical questions, preparation decisions, SQL logic and visual story visible.
 
 [Dataset](data/Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx) · [SQL analysis](sql/01_analysis.sql) · [Validation checks](sql/00_validation.sql) · [Methodology](docs/methodology.md) · [Data model](docs/data-model.md) · [Portfolio](https://ibrahimbolaji.framer.website/)
 
@@ -19,7 +19,7 @@ An independent football analytics project exploring how the FIFA World Cup has e
 
 ## Project objective
 
-Build a structured historical analysis of the World Cup that connects **data preparation → SQL analysis → Power BI storytelling**.
+Build a structured historical analysis of the FIFA World Cup that connects **data preparation → SQL analysis → Power BI storytelling**.
 
 | Question | Analytical approach |
 | --- | --- |
@@ -34,9 +34,11 @@ Build a structured historical analysis of the World Cup that connects **data pre
 
 ## Project scope
 
-**1930–2026.** The project began with historical data through 2022 and was later expanded with a 2026 project layer.
+The project covers **1930–2026**.
 
-Historical records and any 2026 scenario, simulated or manually supplied records should remain clearly distinguishable in interpretation and presentation.
+The historical dataset runs through **2022**. A separate **2026 project extension** was added later to support analysis of the expanded tournament format.
+
+> **Important:** historical records and any 2026 scenario, simulated or manually supplied records should remain clearly distinguishable in interpretation and presentation.
 
 ---
 
@@ -44,13 +46,13 @@ Historical records and any 2026 scenario, simulated or manually supplied records
 
 | Table | Intended role |
 | --- | --- |
-| worldcup_summary | One row per tournament edition |
-| worldcup_matches | Match-level results |
-| worldcup_nations_history | Team-by-edition performance |
-| worldcup_attendance | Edition-level attendance |
-| worldcup_awards | Tournament awards |
-| worldcup_goals | Coverage checks for scoring data |
-| country_lookup | Historical-name and regional mapping |
+| `worldcup_summary` | One row per tournament edition |
+| `worldcup_matches` | Match-level results |
+| `worldcup_nations_history` | Team-by-edition performance |
+| `worldcup_attendance` | Edition-level attendance |
+| `worldcup_awards` | Tournament awards |
+| `worldcup_goals` | Coverage checks for scoring data |
+| `country_lookup` | Historical-name and regional mapping |
 
 See the full [data model](docs/data-model.md) for expected grain, fields, keys and join considerations.
 
@@ -58,11 +60,13 @@ See the full [data model](docs/data-model.md) for expected grain, fields, keys a
 
 ## Dataset
 
-The cleaned SQL-ready workbook used for this project is included here:
+The cleaned SQL-ready workbook used for this project is included in the repository:
 
 **[Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx](data/Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx)**
 
-It contains the prepared project tables used for PostgreSQL validation, SQL analysis and Power BI development. The workbook includes the historical dataset through 2022 together with the separate 2026 project extension described above.
+It contains the prepared project tables used for PostgreSQL validation, SQL analysis and Power BI development.
+
+The workbook combines the historical dataset through 2022 with the separate 2026 project extension described above.
 
 ---
 
@@ -115,44 +119,23 @@ The SQL demonstrates joins, aggregations, conditional logic, common table expres
 
 ## Dashboard story
 
-### Tournament evolution
-How participation, match volume and scoring changed as the competition expanded.
+The Power BI report is structured around nine analytical pages:
 
-### Historical dominance
-Which national teams repeatedly reached the top of the tournament, and how title counts compare with broader performance.
+1. **Overview** — tournament scale, match volume, goals, scoring rate and attendance.
+2. **Historical Dominance** — titles, podium finishes, final appearances and sustained success.
+3. **Host & Expansion** — host nations, co-hosting and geographic expansion.
+4. **Goals Analysis** — scoring trends, high-scoring tournaments and match records.
+5. **Attendance & Venue** — crowd growth, attendance per match and stadium usage.
+6. **Team Analysis** — results, experience, win rate, goals and points.
+7. **African Nations** — participation, results, scoring and campaign quality.
+8. **World Cup Awards** — award history and individual honours.
+9. **Regional Analysis** — regional outcomes, goal output, win rates and final conversion.
 
-### Goals and match patterns
-How scoring rates changed across editions, plus the highest-scoring recorded matches.
+### Dashboard preview
 
-### Attendance
-How total crowds and per-match attendance changed across World Cup editions.
-
-### African nations
-How African teams compare on participation, results, scoring and best recorded positions.
-
-### 2026 project extension
-A dedicated layer for the expanded 2026 project data. This should be labelled according to the evidence status of the records used.
-
----
-
-## Dashboard preview
-
-The Power BI dashboard contains nine analytical pages:
-
-1. Overview
-2. Historical Dominance
-3. Host & Expansion
-4. Goals Analysis
-5. Attendance & Venue
-6. Team Analysis
-7. African Nations
-8. World Cup Awards
-9. Regional Analysis
-
-> Dashboard screenshots are being added to the `assets/` folder. Until those image files are committed, this section intentionally avoids broken image links.
+Dashboard screenshots will be added to the `assets/` folder once the final exported images are committed.
 
 See the [dashboard publishing guide](docs/dashboard-guide.md).
-
 
 ---
 
@@ -161,7 +144,7 @@ See the [dashboard publishing guide](docs/dashboard-guide.md).
 - Historical team labels are preserved rather than silently merging successor states.
 - Top-two finishes are not automatically treated as identical to appearances in a modern single-final format.
 - Era scoring is calculated from total goals divided by total matches.
-- Standardised points use 3 × wins + draws for comparison and are not historical official points.
+- Standardised points use **3 × wins + draws** for comparison and are not historical official points.
 - Attendance-per-match calculations depend on matching attendance totals to corresponding match counts.
 - African comparisons use the project lookup table and should be preceded by mapping-quality checks.
 
@@ -171,42 +154,42 @@ Read the full [methodology](docs/methodology.md).
 
 ## Repository structure
 
-    fifa-world-cup-historical-analysis/
-    ├── README.md
-    ├── assets/
-    │   ├── README.md
-    │   ├── world-cup-hero.svg
-    │   └── dashboard screenshots (to be added)
-    ├── data/
-    │   └── Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx
-    ├── docs/
-    │   ├── dashboard-guide.md
-    │   ├── data-model.md
-    │   └── methodology.md
-    └── sql/
-        ├── 00_validation.sql
-        └── 01_analysis.sql
+```text
+fifa-world-cup-historical-analysis/
+├── README.md
+├── assets/
+│   ├── README.md
+│   └── world-cup-hero.svg
+├── data/
+│   └── Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx
+├── docs/
+│   ├── dashboard-guide.md
+│   ├── data-model.md
+│   └── methodology.md
+└── sql/
+    ├── 00_validation.sql
+    └── 01_analysis.sql
+```
 
 ---
 
-## Reproducibility status
+## Current publication status
 
-This repository currently publishes the SQL-ready project workbook, analytical SQL and supporting documentation.
+**Included**
 
-The dashboard screenshots, final schema export, verified query outputs, Power BI model and public dashboard link still need to be added before the project can be reproduced from an empty database.
+- SQL-ready project workbook
+- SQL validation checks
+- selected SQL analysis
+- methodology documentation
+- data-model documentation
+- repository banner
 
-Both SQL scripts use read-only transactions and end with ROLLBACK.
+**Still to add**
 
----
-
-## Next publication steps
-
-- [ ] Add clean Power BI dashboard screenshots
-- [ ] Add the verified public Power BI link
-- [x] Add the cleaned SQL-ready project workbook
-- [ ] Add verified query-output examples
-- [ ] Clearly label the status of 2026 records
-- [ ] Add the final written report when complete
+- final dashboard screenshots
+- public Power BI link
+- verified query-output examples
+- Power BI model or report file, where appropriate
 
 ---
 
