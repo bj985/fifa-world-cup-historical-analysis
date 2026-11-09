@@ -267,6 +267,12 @@ Football Data Analyst · Data Storytelling & Match Video Analysis
 
 ---
 
+## More football analytics
+
+- [AFCON Historical Performance Analysis](https://github.com/bj985/afcon-historical-performance-analysis) — competitive balance, regional dominance, hosting, player achievement and attendance analysis.
+
+---
+
 ### Disclaimer
 
 This is an independent analytical project and is not affiliated with FIFA. Third-party data, trademarks and imagery retain their respective rights and reuse conditions.
