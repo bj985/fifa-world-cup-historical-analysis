@@ -9,7 +9,7 @@
 **Bolaji Ibrahim Ajibola** · Football Data Analyst  
 **PostgreSQL · Power BI · Excel · Power Query**
 
-An independent football analytics project exploring how the FIFA World Cup has evolved across tournament scale, scoring, attendance, national-team performance and African participation.
+An end-to-end football analytics project examining how the FIFA World Cup has evolved across tournament scale, scoring, attendance, national-team performance and African participation.
 
 [Dataset](data/Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx) · [SQL analysis](sql/01_analysis.sql) · [Validation checks](sql/00_validation.sql) · [Methodology](docs/methodology.md) · [Data model](docs/data-model.md) · [Portfolio](https://ibrahimbolaji.framer.website/)
 
@@ -17,7 +17,7 @@ An independent football analytics project exploring how the FIFA World Cup has e
 
 ## Project objective
 
-Built a structured historical analysis of the FIFA World Cup that connects **data preparation → SQL analysis → Power BI storytelling**.
+This project connects **data preparation → SQL analysis → Power BI storytelling** to build a structured historical view of the FIFA World Cup.
 
 | Question | Analytical approach |
 | --- | --- |
