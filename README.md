@@ -11,7 +11,6 @@
 
 An independent football analytics project exploring how the FIFA World Cup has evolved across tournament scale, scoring, attendance, national-team performance and African participation.
 
-
 [Dataset](data/Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx) · [SQL analysis](sql/01_analysis.sql) · [Validation checks](sql/00_validation.sql) · [Methodology](docs/methodology.md) · [Data model](docs/data-model.md) · [Portfolio](https://ibrahimbolaji.framer.website/)
 
 ---
@@ -106,7 +105,6 @@ It contains the prepared historical tournament data from 1930 through 2026 used 
 8. Awards
 9. African team records
 
-
 ---
 
 ## Dashboard story
@@ -128,7 +126,6 @@ The Power BI report is structured around nine analytical pages:
 ## Methodology notes
 
 - Historical team labels are preserved rather than silently merging successor states.
-- Top-two finishes are not automatically treated as identical to appearances in a modern single-final format.
 - Era scoring is calculated from total goals divided by total matches.
 - Standardised points use **3 × wins + draws** for comparison and are not historical official points.
 - Attendance-per-match calculations depend on matching attendance totals to corresponding match counts.
@@ -143,7 +140,6 @@ Read the full [methodology](docs/methodology.md).
 fifa-world-cup-historical-analysis/
 ├── README.md
 ├── assets/
-│   ├── README.md
 │   └── world-cup-hero.svg
 ├── data/
 │   └── Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx
