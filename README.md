@@ -121,6 +121,27 @@ The Power BI report is structured around nine analytical pages:
 8. **World Cup Awards** — award history and individual honours.
 9. **Regional Analysis** — regional outcomes, goal output, win rates and final conversion.
 
+
+### Dashboard preview
+
+#### 01 · Overview
+
+<p align="center">
+  <img src="assets/dashboard-overview.png" alt="World Cup dashboard overview" width="100%">
+</p>
+
+#### 02 · Historical Dominance
+
+<p align="center">
+  <img src="assets/historical-dominance.png" alt="World Cup historical dominance dashboard" width="100%">
+</p>
+
+#### 03 · Host & Expansion
+
+<p align="center">
+  <img src="assets/host-expansion.png" alt="World Cup host and expansion dashboard" width="100%">
+</p>
+
 ---
 
 ## Methodology notes
@@ -140,7 +161,10 @@ Read the full [methodology](docs/methodology.md).
 fifa-world-cup-historical-analysis/
 ├── README.md
 ├── assets/
-│   └── world-cup-hero.svg
+│   ├── world-cup-hero.svg
+│   ├── dashboard-overview.png
+│   ├── historical-dominance.png
+│   └── host-expansion.png
 ├── data/
 │   └── Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx
 ├── docs/
