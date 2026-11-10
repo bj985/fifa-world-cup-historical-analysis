@@ -11,7 +11,6 @@
 
 An independent football analytics project exploring how the FIFA World Cup has evolved across tournament scale, scoring, attendance, national-team performance and African participation.
 
-> The aim is not simply to display football statistics, but to make the analytical questions, preparation decisions, SQL logic and visual story visible.
 
 [Dataset](data/Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx) · [SQL analysis](sql/01_analysis.sql) · [Validation checks](sql/00_validation.sql) · [Methodology](docs/methodology.md) · [Data model](docs/data-model.md) · [Portfolio](https://ibrahimbolaji.framer.website/)
 
@@ -60,9 +59,7 @@ The cleaned SQL-ready workbook used for this project is included in the reposito
 
 **[Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx](data/Final_FIFA_WorldCup_DATASETS_1930_2026_SQL_READY.xlsx)**
 
-It contains the prepared project tables used for PostgreSQL validation, SQL analysis and Power BI development.
-
-The workbook contains the completed historical tournament data from 1930 through 2026 used across the SQL analysis and Power BI dashboard.
+It contains the prepared historical tournament data from 1930 through 2026 used for PostgreSQL validation, SQL analysis and Power BI development.
 
 ---
 
@@ -85,7 +82,7 @@ The workbook contains the completed historical tournament data from 1930 through
 
 [sql/00_validation.sql](sql/00_validation.sql) checks:
 
-- source-table coverage and explicit 2026 row counts;
+- source-table and tournament-edition coverage;
 - duplicate tournament years;
 - missing or duplicate match IDs;
 - duplicate team-edition keys;
@@ -109,7 +106,6 @@ The workbook contains the completed historical tournament data from 1930 through
 8. Awards
 9. African team records
 
-The SQL demonstrates joins, aggregations, conditional logic, common table expressions, window functions, numeric division and zero-denominator handling.
 
 ---
 
@@ -127,12 +123,6 @@ The Power BI report is structured around nine analytical pages:
 8. **World Cup Awards** — award history and individual honours.
 9. **Regional Analysis** — regional outcomes, goal output, win rates and final conversion.
 
-### Dashboard preview
-
-Dashboard screenshots will be added to the `assets/` folder once the final exported images are committed.
-
-See the [dashboard publishing guide](docs/dashboard-guide.md).
-
 ---
 
 ## Methodology notes
@@ -142,7 +132,6 @@ See the [dashboard publishing guide](docs/dashboard-guide.md).
 - Era scoring is calculated from total goals divided by total matches.
 - Standardised points use **3 × wins + draws** for comparison and are not historical official points.
 - Attendance-per-match calculations depend on matching attendance totals to corresponding match counts.
-- African comparisons use the project lookup table and should be preceded by mapping-quality checks.
 
 Read the full [methodology](docs/methodology.md).
 
@@ -169,30 +158,10 @@ fifa-world-cup-historical-analysis/
 
 ---
 
-## Current publication status
-
-**Included**
-
-- SQL-ready project workbook
-- SQL validation checks
-- selected SQL analysis
-- methodology documentation
-- data-model documentation
-- repository banner
-
-**Still to add**
-
-- final dashboard screenshots
-- public Power BI link
-- verified query-output examples
-- Power BI model or report file, where appropriate
-
----
-
 ## Author
 
 **Bolaji Ibrahim Ajibola**  
-Football Data Analyst · Data Storytelling & Match Video Analysis
+Football Data Analyst · PostgreSQL · Power BI
 
 [Portfolio](https://ibrahimbolaji.framer.website/) · [LinkedIn](https://www.linkedin.com/in/ajibola-bolaji/) · [GitHub](https://github.com/bj985)
 
