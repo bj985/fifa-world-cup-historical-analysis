@@ -17,7 +17,7 @@ An independent football analytics project exploring how the FIFA World Cup has e
 
 ## Project objective
 
-Build a structured historical analysis of the FIFA World Cup that connects **data preparation → SQL analysis → Power BI storytelling**.
+Built a structured historical analysis of the FIFA World Cup that connects **data preparation → SQL analysis → Power BI storytelling**.
 
 | Question | Analytical approach |
 | --- | --- |
